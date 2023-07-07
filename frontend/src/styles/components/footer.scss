@@ -1,0 +1,14 @@
+.footer {
+  @include centrer;
+  width: 100%;
+  height: 209px;
+  flex-direction: column;
+  background-color: $black;
+  img {
+    width: 122px;
+  }
+  p {
+    padding-top: 29px;
+    color: white;
+  }
+}

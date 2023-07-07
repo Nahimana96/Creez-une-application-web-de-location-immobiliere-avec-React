@@ -1,0 +1,31 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45px auto;
+  padding: 0 30px;
+  .logo {
+    width: 210px;
+    height: 68px;
+    img {
+      width: 100%;
+    }
+  }
+  ul {
+    display: flex;
+    a {
+      text-decoration: none;
+      padding: 10px;
+
+      li {
+        font-weight: 500;
+        color: $pink;
+        cursor: pointer;
+      }
+    }
+    .nav-active {
+      text-decoration: underline;
+      color: $pink;
+    }
+  }
+}
