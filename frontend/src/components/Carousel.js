@@ -21,23 +21,24 @@ const Carousel = ({ images }) => {
       <div className="image-container">
         <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} />
       </div>
-      <div className="navigation">
-        {currentIndex > 0 && (
+      {totalImages != 1 && (
+        <div className="navigation">
           <i
             className="fa-solid fa-chevron-left fa-2xl"
             onClick={goToPrevious}
           ></i>
-        )}
-        {currentIndex !== totalImages - 1 && (
           <i
             className="fa-solid fa-chevron-right fa-2xl"
             onClick={goToNext}
           ></i>
-        )}
-      </div>
-      <div className="image-count">{`${
-        currentIndex + 1
-      } / ${totalImages}`}</div>
+        </div>
+      )}
+
+      {totalImages != 1 && (
+        <div className="image-count">{`${
+          currentIndex + 1
+        } / ${totalImages}`}</div>
+      )}
     </div>
   );
 };

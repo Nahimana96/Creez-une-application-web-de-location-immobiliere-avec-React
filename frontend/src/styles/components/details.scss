@@ -1,0 +1,55 @@
+.details {
+  position: relative;
+  margin: 0 30px;
+  > h1 {
+    margin-top: 30px;
+  }
+  h1,
+  p {
+    color: $pink;
+  }
+  .host {
+    position: absolute;
+    top: 30px;
+    transform: translateY(-50%);
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      width: 93px;
+      height: 52px;
+    }
+    .host-picture {
+      width: 64px;
+      border-radius: 50%;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+  .tags {
+    display: inline-block;
+    background-color: $pink;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-top: 20px;
+  }
+  .collapse {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 24px auto;
+    div {
+      width: 90%;
+      margin: 0 !important;
+      //   max-height: 50px;
+    }
+  }
+}

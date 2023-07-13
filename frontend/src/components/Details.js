@@ -8,16 +8,21 @@ const Details = ({ details }) => {
       <p>{details.location}</p>
       <div className="host">
         <p>{details.host.name}</p>
-        <img src={details.host.picture} alt={`photo de ${details.host.name}`} />
-        <div className="tags">
-          <ul>
-            <li>{details.tags}</li>
-          </ul>
+        <div className="host-picture">
+          <img
+            src={details.host.picture}
+            alt={`photo de ${details.host.name}`}
+          />
         </div>
-        <div className="collapse">
-          <Collapse title="Description" content={details.description} />
-          <Collapse title="Equipements" content={details.equipments} />
-        </div>
+      </div>
+      <div className="tags">
+        <ul>
+          <li>{details.tags}</li>
+        </ul>
+      </div>
+      <div className="collapse">
+        <Collapse title="Description" content={details.description} />
+        <Collapse title="Equipements" content={details.equipments} />
       </div>
     </div>
   );
