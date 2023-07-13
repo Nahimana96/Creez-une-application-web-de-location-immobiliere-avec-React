@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import Card from "./Card";
+import { Link } from "react-router-dom";
 const Logements = () => {
-  const [logements, setLogements] = useState([]);
-
+  const [logements, setlogements] = useState([]);
   useEffect(() => {
-    axios
-      .get("logements.json")
-      .then((res) => setLogements(res.data))
-      .catch((err) => console.log(err));
-  });
-
+    fetch("listLogements.json")
+      .then((res) => res.json())
+      .then((data) => setlogements(data))
+      .catch((err) => console.error(err));
+  }, []);
   return (
     <div className="grid-logements">
       <ul>
         {logements.map((logement) => (
-          <li key={logement.id}>
-            <p>{logement.title}</p>
-            <img src={logement.cover} alt="couverture" />
-          </li>
+          <Link to={`/ficheLogement/${logement.id}`} state={{ logement }}>
+            <Card key={logement.id} logement={logement} />
+          </Link>
         ))}
       </ul>
     </div>
