@@ -16,10 +16,10 @@ const Apropos = () => {
       <div className="presentation">
         <img src="./background2.png" alt="paysage" />
       </div>
-      <Collapse title="Fiabilité" content={fiabilité} />
-      <Collapse title="Respect" content={respect} />
-      <Collapse title="Service" content={respect} />
-      <Collapse title="Sécurité" content={securite} />
+      <Collapse title="Fiabilité" content={<p>{fiabilité}</p>} />
+      <Collapse title="Respect" content={<p>{respect}</p>} />
+      <Collapse title="Service" content={<p>{respect}</p>} />
+      <Collapse title="Sécurité" content={<p>{securite}</p>} />
       <Footer />
     </div>
   );

@@ -16,9 +16,7 @@ const Collapse = (props) => {
           onClick={toggleCollapse}
         ></i>
       </div>
-      <div className="collapse">
-        <p>{props.content}</p>
-      </div>
+      <div className="collapse">{props.content}</div>
     </div>
   );
 };

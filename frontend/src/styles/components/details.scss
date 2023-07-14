@@ -34,22 +34,35 @@
     }
   }
   .tags {
-    display: inline-block;
-    background-color: $pink;
-    color: white;
-    border-radius: 10px;
-    padding: 5px 10px;
-    margin-top: 20px;
+    margin: 20px 0px;
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      li {
+        color: white;
+        background-color: $pink;
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin-left: 10px;
+      }
+    }
   }
   .collapse {
     width: 100%;
     display: flex;
-    justify-content: center;
-    margin: 24px auto;
-    div {
-      width: 90%;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    .collapse-container {
+      width: 45%;
       margin: 0 !important;
-      //   max-height: 50px;
+      ul {
+        padding: 20px;
+        color: $pink;
+        li {
+          padding: 5px 0;
+        }
+      }
     }
   }
 }

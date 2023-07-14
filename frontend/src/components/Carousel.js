@@ -19,9 +19,12 @@ const Carousel = ({ images }) => {
   return (
     <div className="carousel">
       <div className="image-container">
-        <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+        <img
+          src={images[currentIndex]}
+          alt={`Illustration n°${currentIndex + 1}`}
+        />
       </div>
-      {totalImages != 1 && (
+      {totalImages !== 1 && (
         <div className="navigation">
           <i
             className="fa-solid fa-chevron-left fa-2xl"
@@ -34,7 +37,7 @@ const Carousel = ({ images }) => {
         </div>
       )}
 
-      {totalImages != 1 && (
+      {totalImages !== 1 && (
         <div className="image-count">{`${
           currentIndex + 1
         } / ${totalImages}`}</div>
