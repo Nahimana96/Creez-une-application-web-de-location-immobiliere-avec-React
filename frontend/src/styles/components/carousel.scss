@@ -23,6 +23,7 @@
       left: 2%;
       color: white;
       transform: translateY(-50%);
+      cursor: pointer;
     }
     .fa-chevron-right {
       position: absolute;
@@ -30,6 +31,7 @@
       right: 2%;
       color: white;
       transform: translateY(50%);
+      cursor: pointer;
     }
   }
   .image-count {

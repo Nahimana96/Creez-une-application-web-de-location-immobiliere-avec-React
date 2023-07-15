@@ -33,19 +33,34 @@
       }
     }
   }
-  .tags {
-    margin: 20px 0px;
-    ul {
-      display: flex;
-      justify-content: flex-start;
-      li {
-        color: white;
-        background-color: $pink;
-        font-size: 14px;
-        padding: 5px 10px;
-        border-radius: 10px;
-        margin-left: 10px;
+  .ratings-tags {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .tags {
+      margin: 20px 0px;
+      ul {
+        display: flex;
+        justify-content: flex-start;
+
+        li {
+          color: white;
+          background-color: $pink;
+          font-size: 14px;
+          padding: 5px 10px;
+          border-radius: 10px;
+          margin-left: 10px;
+        }
       }
+    }
+  }
+  .ratings {
+    display: flex;
+    .rose {
+      color: $pink;
+    }
+    .gris {
+      color: $grey;
     }
   }
   .collapse {
