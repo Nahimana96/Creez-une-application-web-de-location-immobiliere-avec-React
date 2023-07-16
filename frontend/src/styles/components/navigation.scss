@@ -30,3 +30,17 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    margin: 20px auto;
+    .logo {
+      width: 145px;
+      height: 46px;
+    }
+    ul a li {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+}

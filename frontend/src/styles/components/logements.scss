@@ -43,3 +43,18 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .grid-logements {
+    padding: 0;
+    background-color: white;
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      li {
+        height: 255px;
+      }
+    }
+  }
+}

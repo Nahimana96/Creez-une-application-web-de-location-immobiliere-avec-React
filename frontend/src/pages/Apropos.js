@@ -13,7 +13,7 @@ const Apropos = () => {
   return (
     <div>
       <Navigation />
-      <div className="presentation">
+      <div className="presentation mob-version">
         <img src="./background2.png" alt="paysage" />
       </div>
       <Collapse title="Fiabilité" content={<p>{fiabilité}</p>} />

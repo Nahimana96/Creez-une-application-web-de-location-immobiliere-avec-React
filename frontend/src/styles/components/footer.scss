@@ -10,5 +10,16 @@
   p {
     padding-top: 29px;
     color: white;
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer {
+    p {
+      width: 133px;
+      font-size: 12px;
+      text-align: center;
+      padding: 20px 10px 0 10px;
+    }
   }
 }
