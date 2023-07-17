@@ -1,25 +1,29 @@
 import Navigation from "../components/Navigation";
-import { useLocation } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
-import Page404 from "./Page404";
 import Carousel from "../components/Carousel";
 import Details from "../components/Details";
+import { useEffect } from "react";
 
-const FicheLogement = () => {
-  // const { logementId } = useParams();
-  const { state } = useLocation();
-  const detailDuLogement = state.logement || {};
-
-  return detailDuLogement.id !== undefined ? (
-    <>
-      {console.log(detailDuLogement)} <Navigation />
-      <Carousel images={detailDuLogement.pictures} />
-      <Details details={detailDuLogement} />
-      <Footer />
-    </>
-  ) : (
-    <Page404 />
+const FicheLogement = ({ logements }) => {
+  const { logementId } = useParams();
+  const navigate = useNavigate();
+  const detailDuLogement = logements.find(
+    (logement) => logement.id === logementId
   );
+  useEffect(() => {
+    detailDuLogement === undefined && navigate("/404");
+  });
+  if (detailDuLogement !== undefined) {
+    return (
+      <>
+        <Navigation />;
+        <Carousel images={detailDuLogement.pictures} />
+        <Details details={detailDuLogement} />
+        <Footer />
+      </>
+    );
+  }
 };
 
 export default FicheLogement;
