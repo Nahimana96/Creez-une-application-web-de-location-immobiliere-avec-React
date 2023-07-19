@@ -31,7 +31,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .navigation {
     margin: 20px auto;
     .logo {
@@ -41,6 +41,16 @@
     ul a li {
       font-size: 12px;
       text-transform: uppercase;
+    }
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .navigation {
+    align-items: center;
+    .logo {
+      width: 125px;
+      height: 26px;
     }
   }
 }
