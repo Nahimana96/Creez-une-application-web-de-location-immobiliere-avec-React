@@ -1,23 +1,26 @@
 import Navigation from "../components/Navigation";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
 import Details from "../components/Details";
 import { useEffect } from "react";
+import { annonces } from "../assets/data/listLogements";
 
 const FicheLogement = () => {
+  const { logementId } = useParams();
   const navigate = useNavigate();
-  const location = useLocation();
-  const data = location.state;
+  const detailDuLogement = annonces.find(
+    (logement) => logement.id === logementId
+  );
   useEffect(() => {
-    data === null && navigate("/404");
+    detailDuLogement === undefined && navigate("/404");
   });
-  if (data !== null) {
+  if (detailDuLogement !== undefined) {
     return (
       <>
         <Navigation />;
-        <Carousel images={data.pictures} />
-        <Details details={data} />
+        <Carousel images={detailDuLogement.pictures} />
+        <Details details={detailDuLogement} />
         <Footer />
       </>
     );
