@@ -10,6 +10,7 @@ const Ratings = ({ rating }) => {
     <div>
       {[...Array(5)].map((_, index) => (
         <i
+          key={index}
           className={`fa-solid fa-star ${
             index < currentRating ? "rose" : "gris"
           }`}

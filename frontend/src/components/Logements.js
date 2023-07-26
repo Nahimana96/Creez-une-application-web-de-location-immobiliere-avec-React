@@ -6,8 +6,12 @@ const Logements = ({ logements }) => {
     <div className="grid-logements">
       <ul>
         {logements.map((logement) => (
-          <Link to={`/ficheLogement/${logement.id}`}>
-            <Card key={logement.id} logement={logement} />
+          <Link
+            key={logement.id}
+            to={`/ficheLogement/${logement.id}`}
+            state={logement}
+          >
+            <Card logement={logement} />
           </Link>
         ))}
       </ul>
