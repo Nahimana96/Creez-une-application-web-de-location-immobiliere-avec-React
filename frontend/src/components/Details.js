@@ -1,6 +1,6 @@
 import React from "react";
 import Collapse from "./Collapse";
-// import Ratings from "./Ratings";
+import Ratings from "./Ratings";
 
 const Details = ({ details }) => {
   return (
@@ -23,7 +23,7 @@ const Details = ({ details }) => {
           </div>
         </div>
         <div className="ratings">
-          {/* <Ratings rating={details.rating} /> */}
+          <Ratings rating={details.rating} />
         </div>
       </div>
       <div className="properties">
